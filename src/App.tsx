@@ -10,7 +10,7 @@ import {SafeAreaView, StatusBar} from 'react-native';
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle='dark-content' />
       <SafeAreaView />
     </>
   );
