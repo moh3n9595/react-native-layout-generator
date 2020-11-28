@@ -5,7 +5,7 @@
  */
 
 import React, {useCallback, useEffect, useState} from 'react';
-import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import {McInput} from './common';
 import LayoutGenerator from './components/LayoutGenerator';
 
@@ -22,13 +22,10 @@ const App = () => {
   }, [input]);
 
   return (
-    <>
-      <StatusBar barStyle='dark-content' />
-      <SafeAreaView style={styles.container}>
-        <McInput onChangeText={setRuleCallback} value={input} style={styles.input} />
-        <LayoutGenerator rule={rule} />
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={styles.container}>
+      <McInput onChangeText={setRuleCallback} value={input} style={styles.input} />
+      <LayoutGenerator rule={rule} />
+    </SafeAreaView>
   );
 };
 
